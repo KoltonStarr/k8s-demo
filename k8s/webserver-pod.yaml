@@ -1,0 +1,19 @@
+# A Pod is our K8s wrapper for our containers.
+# We usually do NOT deploy workloads using Pod definitions directly. We will for right now just for demonstration purposes.
+apiVersion: v1
+kind: Pod
+metadata:
+  # Give the pod a meaningful name. 
+  name: webserver
+  # Put it in the demo namespace.
+  namespace: demo
+  # Label it so that it can be selected by services that wish to send traffic to it. 
+  labels:
+    app: webserver
+spec:
+  containers:
+    # Give the container a name.
+    - name: webserver
+      image: public.ecr.aws/x0t1p1c7/demo/webserver:latest # Pulls image from public ECR repo.
+      ports:
+        - containerPort: 8080 # This is the port that the rust webserver is listening on.

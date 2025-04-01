@@ -1,0 +1,31 @@
+# K8s Deployments are where the magic is. This is what you will be using when deploying your applications. 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  # Label it appropriately. 
+  labels:
+    app: webserver
+  # Give it a meaningful name.
+  name: webserver-deployment
+  # Put it in the demo namespace.
+  namespace: demo
+spec:
+  # Now we can specify how many instances of the webserver pod we want running.
+  replicas: 3
+  # Tell the deployment to select and manage pods that are labelled with 'webserver'
+  selector:
+    matchLabels:
+      app: webserver
+  # Begin the Pod template specification.
+  template:
+    metadata:
+      # Give it a label just like we did when creating a Pod definition so that it can be selected by deployment and services.
+      labels:
+        app: webserver
+    spec:
+      containers:
+      # Image location.
+      - image: public.ecr.aws/x0t1p1c7/demo/webserver:latest
+        name: webserver # Container name.
+        ports:
+        - containerPort: 8080 # Port 8080 which is what the rust webserver is running on.
