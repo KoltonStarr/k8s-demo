@@ -19,5 +19,4 @@ spec:
   - name: 8080-8080 # You don't need this. 
     protocol: TCP
     nodePort: 31127 # This is the port that gets opened on each worker node. K8s does the work for you. 
-    port: 80 # This is the port of the internal clusterip service that gets create in the background. 
-    targetPort: 8080 # This is the port that the pods are listening on. We can use a named port if so desired.
+    port: 8080 # This is the port of the internal clusterip service that gets create in the background. 
