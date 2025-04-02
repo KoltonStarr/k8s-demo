@@ -20,8 +20,8 @@
 - I don't want to cover this too much because this could be an entire talk of it's own. 
 
 ## Benefits of using K8s vs. other solutions. 
-- 
-- 
+- K8s magnifies the benefits of containers. It is an incredibly useful framework to deploy and manage containerized applications.
+- With K8s, we can make our applications more resilient, secure, highly scalable, and self healing. These attributes are not often present in traditional network systems.
 
 ## Startup: Architecture
 - Worker Nodes. 
@@ -87,3 +87,6 @@ THE END
 - Stresses knowledge of automation and how to easily automate releases to a K8s environment.
 
 ## Questions??
+
+## Link to Excalidraw
+[Link](https://app.excalidraw.com/s/9gXXTGorvoH/88bkG17oSbj)
