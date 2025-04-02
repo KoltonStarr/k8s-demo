@@ -4,7 +4,7 @@
 - To see the full lifecycle of developing an application and then deploying it to K8s.
 - Technical, brief, to the point.
 
-## Caveat (Kolton)
+## Caveat (Kolton & David)
 - Kubernetes has a steep learning curve in my opinion. When I was first learning, the concepts just don't stick really well at first. If we were demoing features of a new programming language it would probably be easier because we all know what for loops are, data types, etc. So a lot of this material might seem like a bit of a black hole at first and it might be hard to connect the concepts to your day-to-day development. Nonetheless, its still valuable information!
 
 ## Brief History of K8s. (Kolton)
